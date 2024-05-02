@@ -17,7 +17,9 @@ describe('template spec', () => {
       form.should('contain','Saint');
       form.should('contain','1001021');
     })
-    
+    cy.get('[ng-click="home()"]').should('be.visible').click();
+    cy.get('[ng-click="customer()"]').should('exist').click();
+    cy.get('#userSelect').select()
 
     
   });
