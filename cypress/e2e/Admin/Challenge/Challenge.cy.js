@@ -48,10 +48,6 @@ describe("Challenge", () => {
       cy.findByText('Customer Login').click();
       cy.get('#userSelect').last().select('Matthew Bansford')
       cy.findByText('Login').click();
-
-      cy.findByText('Home').click();
-      cy.findByText('Bank Manager Login').click();
-      
       
     });
   })
