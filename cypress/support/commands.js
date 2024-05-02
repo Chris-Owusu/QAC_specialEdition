@@ -25,12 +25,11 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
 // Import of Pages
-import UserLogin from '../e2e/Admin/Login/Admin-login';
 
 
 
 // New Pages declaration
-const login = new UserLogin();
+
 
 
 
@@ -48,28 +47,6 @@ Cypress.Commands.add('hover', (value) => {
 Cypress.Commands.add('navigateToLogin', () => {
     cy.visit('/')
 })
-
-
-// Login As User
-Cypress.Commands.add('login', (email,password) => {
-    login.enterEmail(email);
-    login.enterPassword(password);
-    login.clickSignIn();
-})
-
-
-
-// Admin Commands
-
-
-
-
-// Instructor Commands
-
-
-
-
-// Learners Commands
 
 
 
