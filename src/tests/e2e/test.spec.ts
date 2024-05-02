@@ -74,6 +74,6 @@ test.describe('', () => {
   await page.click('form[role="form"] button:has-text("Withdraw")');
   
   await page.click('text=1600');
-   
+   expect('text=1600').toBe('1600')
   })
 })
