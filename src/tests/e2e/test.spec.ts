@@ -2,7 +2,7 @@ import { test } from '@playwright/test'
 const now = new Date();
 
 test.describe('', () => {
-  test.beforeEach(async ({ page, baseURL }) => {
+  test.beforeEach(async ( page ) => {
     
    
   })
