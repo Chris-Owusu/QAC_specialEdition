@@ -3,12 +3,14 @@ package pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class AddCustomerPage
 {
     private WebDriver driver;
     public AddCustomerPage (WebDriver driver) {
         this.driver = driver;
+        PageFactory.initElements(driver, this);
     }
 
     @FindBy(css = "input[placeholder='First Name']")
@@ -33,5 +35,6 @@ public class AddCustomerPage
     public void submitCustomerInfo()
     {
         submitCustomerDetailButton.click();
+        driver.switchTo().alert().accept();
     }
 }
