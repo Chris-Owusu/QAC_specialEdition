@@ -29,6 +29,13 @@ describe("Challenge", () => {
       cy.findByPlaceholderText('Last Name').type('Bansford');
       cy.findByPlaceholderText('Post Code').type('00233');
       cy.findAllByText('Add Customer').eq(1).click();
+      
+      // Open Account
+      cy.findByText('Open Account').click();
+      cy.get().last().select('Matthew Bansford')
+      cy.get('#userSelect').first().select('Matthew Bansford')
+      cy.get('#userSelect').last().select('Dollar')
+      cy.findByText('Process').click();
 
       // Assert Customer
       cy.findByText('Customers').click();
@@ -44,10 +51,7 @@ describe("Challenge", () => {
 
       cy.findByText('Home').click();
       cy.findByText('Bank Manager Login').click();
-      cy.findByText('Open Account').click();
-      cy.get().last().select('Matthew Bansford')
-      cy.get('#userSelect').first().select('Matthew Bansford')
-      cy.get('#userSelect').last().select('Dollar')
-      cy.findByText('Process').click();
+      
+      
     });
   })
