@@ -44,7 +44,10 @@ describe("Challenge", () => {
 
       cy.findByText('Home').click();
       cy.findByText('Bank Manager Login').click();
-      cy.findByText('Open Accounrt').click();
+      cy.findByText('Open Account').click();
       cy.get().last().select('Matthew Bansford')
+      cy.get('#userSelect').first().select('Matthew Bansford')
+      cy.get('#userSelect').last().select('Dollar')
+      cy.findByText('Process').click();
     });
   })
