@@ -1,0 +1,23 @@
+{
+  "name": "qac_specialedition",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chris-Owusu/QAC_specialEdition.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chris-Owusu/QAC_specialEdition/issues"
+  },
+  "homepage": "https://github.com/Chris-Owusu/QAC_specialEdition#readme",
+  "dependencies": {
+    "cypress": "^13.8.1"
+  }
+}
