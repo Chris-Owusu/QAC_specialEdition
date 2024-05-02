@@ -50,6 +50,6 @@ describe("Challenge", () => {
 
       cy.findByText('Deposit').first().click();
       cy.findByPlaceholderText('amount').type('100');
-      cy.findByText('Deposit').last().click();
+      cy.get('form.ng-dirty > .btn').click();
     });
   })
