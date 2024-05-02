@@ -32,7 +32,6 @@ describe("Challenge", () => {
       
       // Open Account
       cy.findByText('Open Account').click();
-      cy.get('#userSelect').last().select('Matthew Bansford')
       cy.get('#userSelect').first().select('Matthew Bansford')
       cy.get('#userSelect').last().select('Dollar')
       cy.findByText('Process').click();
