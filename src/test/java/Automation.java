@@ -6,6 +6,8 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.util.List;
+
 public class Automation {
     WebDriver driver;
     @Test
@@ -35,6 +37,7 @@ public class Automation {
 
         driver.findElement(By.xpath("//button[@class='btn btn-lg tab btn-primary']")).click();
 
+        List<WebElement> rows = driver.findElements(By.cssSelector("tr"));
 
 
 
