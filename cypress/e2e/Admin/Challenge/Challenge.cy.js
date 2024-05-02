@@ -32,7 +32,7 @@ describe("Challenge", () => {
       
       // Open Account
       cy.findByText('Open Account').click();
-      cy.get().last().select('Matthew Bansford')
+      cy.get('#userSelect').last().select('Matthew Bansford')
       cy.get('#userSelect').first().select('Matthew Bansford')
       cy.get('#userSelect').last().select('Dollar')
       cy.findByText('Process').click();
@@ -49,8 +49,8 @@ describe("Challenge", () => {
       cy.get('#userSelect').last().select('Matthew Bansford')
       cy.findByText('Login').click();
 
-      cy.findByText('Deposit').click();
+      cy.findByText('Deposit').first().click();
       cy.findByPlaceholderText('amount').type('100');
-      
+      cy.findByText('Deposit').last().click();
     });
   })
