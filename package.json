@@ -1,0 +1,14 @@
+{
+  "devDependencies": {
+    "@cypress-audit/lighthouse": "^1.4.2",
+    "@testing-library/cypress": "^9.0.0",
+    "cypress": "^12.17.4",
+    "cypress-file-upload": "^5.0.8"
+  },
+  "scripts": {
+    "test": "cypress run"
+  },
+  "dependencies": {
+    "cypress-real-events": "^1.10.1"
+  }
+}
