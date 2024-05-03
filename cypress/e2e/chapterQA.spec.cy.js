@@ -30,10 +30,10 @@ describe('template spec', () => {
         // cy.wrap(cells).eq(0).should('contain', 'ExpectedData');
       });
     });
-    })
     cy.get('[ng-click="home()"]').should('be.visible').click();
     cy.get('[ng-click="customer()"]').should('exist').click();
     cy.get('#userSelect').select()
+  })
 
     
   });
