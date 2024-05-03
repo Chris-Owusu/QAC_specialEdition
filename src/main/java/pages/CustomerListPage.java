@@ -17,16 +17,23 @@ public class CustomerListPage
     @FindBy(css = "input[placeholder='Search Customer']")
     private WebElement searchCustomerInput;
 
+    @FindBy(xpath = "//button[contains(text(),'Delete')]")
+    private WebElement deleteButton;
     public void searchCustomer(String customerName)
     {
         searchCustomerInput.sendKeys(customerName);
         // tbody td:nth-child(1)
-        // //button[normalize-space()='Delete']
+        // //button[normalize-space()='Delete']  //
     }
 
     public String getSearchedResult()
     {
         return searchedItemContainer.getText();
+    }
+
+    public void deleteCustomer()
+    {
+        deleteButton.click();
     }
 
 }

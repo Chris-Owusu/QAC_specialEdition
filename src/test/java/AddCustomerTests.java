@@ -23,6 +23,13 @@ public class AddCustomerTests extends BaseTest
      TransactionsPage transactionsPage = customerPage.loginCustomer();
      transactionsPage.depositMoney();
      transactionsPage.withdrawAmount();
+     Assert.assertEquals(transactionsPage.balance(), "7200");
+     transactionsPage.myHome();
+     homePage.clickManagerLoginButton();
+     customerListPage = managerPage.clickCustomerListButton();
+     customerListPage.searchCustomer("Abdul");
+     customerListPage.deleteCustomer();
+
     }
 
 

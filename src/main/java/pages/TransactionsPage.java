@@ -34,6 +34,11 @@ public class TransactionsPage
     @FindBy(css = "button[type=\"submit\"]")
     private WebElement depositSubmitButton;
 
+    @FindBy(css = "div[ng-hide='noAccount'].center")
+    private WebElement balanceField;
+
+    @FindBy(xpath = "//button[contains(text(),'Home')]")
+    private WebElement homeButton;
     @FindBy(xpath = "//button[contains(text(),'Withdraw') and contains(@class, 'btn-default')]")
     private WebElement withdrawSubmitButton;
     public void depositMoney()
@@ -54,6 +59,18 @@ public class TransactionsPage
         withdrawAmountInput.sendKeys(amount);
         withdrawSubmitButton.click();
 
+
+    }
+
+    public String balance()
+    {
+        return balanceField.getText().split("Balance")[1].split(":")[1].split(",")[0].trim();
+    }
+
+    public HomePage myHome()
+    {
+        homeButton.click();
+        return new HomePage(driver);
     }
 
 
