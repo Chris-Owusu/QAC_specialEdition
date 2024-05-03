@@ -1,9 +1,6 @@
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.AddCustomerPage;
-import pages.CustomerListPage;
-import pages.ManagerPage;
-import pages.OpenAccountPage;
+import pages.*;
 
 public class AddCustomerTests extends BaseTest
 {
@@ -22,6 +19,11 @@ public class AddCustomerTests extends BaseTest
      customerListPage.searchCustomer("Abdul");
      Assert.assertEquals(customerListPage.getSearchedResult(), "Abdul");
      goHome();
+     CustomerPage customerPage = homePage.clickCustomerLoginButton();
+     customerPage.chooseCustomer("Abdul Razak");
+     TransactionsPage transactionsPage = customerPage.loginCustomer();
+     transactionsPage.depositMoney();
+     transactionsPage.withdrawAmount();
     }
 
 

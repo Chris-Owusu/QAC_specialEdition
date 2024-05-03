@@ -14,7 +14,7 @@ public class CustomerPage
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(id = "id=\"userSelect\"")
+    @FindBy(id = "userSelect")
     private WebElement selectCustomer;
 
     @FindBy(css = "button[type='submit']")
@@ -23,11 +23,13 @@ public class CustomerPage
     public void chooseCustomer(String name)
     {
         Select options = new Select(selectCustomer);
+        selectCustomer.click();
         options.selectByVisibleText(name);
     }
 
-    public void loginCustomer()
+    public TransactionsPage loginCustomer()
     {
         customerLoginButton.click();
+        return new TransactionsPage(driver);
     }
 }
