@@ -5,8 +5,7 @@ import pages.*;
 public class AddCustomerTests extends BaseTest
 {
     @Test
-    public void addNewCustomer()
-    {
+    public void addNewCustomer() throws InterruptedException {
      ManagerPage managerPage =  homePage.clickManagerLoginButton();
      AddCustomerPage addCustomerPage = managerPage.clickAddCustomerButton();
      addCustomerPage.enterCustomerDetails("Abdul", "Razak", "5634");

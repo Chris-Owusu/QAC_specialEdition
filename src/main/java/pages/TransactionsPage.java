@@ -44,26 +44,27 @@ public class TransactionsPage
 
     }
 
-    public void withdrawAmount()
-    {
-        try {
-            int depositAmount = Integer.parseInt(amountDeposited);
-            System.out.println(depositAmount);
+    public void withdrawAmount() throws InterruptedException {
 
-            int withdrawAmount = (int) (0.2 * depositAmount);
-            System.out.println(withdrawAmount);
+        int depositAmount = Integer.parseInt(amountDeposited);
+        System.out.println(depositAmount);
 
-            String amount = String.valueOf(withdrawAmount);
-            withDrawlButton.click();
-            withdrawAmountInput.sendKeys(amount);
-            System.out.println(amount);
-            withdrawSubmitButton.click();
+        int withdrawAmount = (int) (0.2 * depositAmount);
+        System.out.println(withdrawAmount);
 
-        } catch (NumberFormatException e) {
-            System.err.println("Invalid number format for deposit amount: " + amountDeposited);
-        }
-
+        String amount = String.valueOf(withdrawAmount);
+        withDrawlButton.click();
+        withdrawAmountInput.sendKeys(amount);
+        System.out.println(amount);
+        Thread.sleep(4000);
+        withdrawSubmitButton.click();
 
     }
 
+
 }
+
+
+
+
+
