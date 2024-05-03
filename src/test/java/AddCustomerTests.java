@@ -29,6 +29,7 @@ public class AddCustomerTests extends BaseTest
      customerListPage = managerPage.clickCustomerListButton();
      customerListPage.searchCustomer("Abdul");
      customerListPage.deleteCustomer();
+     goHome();
 
     }
 
