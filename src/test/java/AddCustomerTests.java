@@ -21,8 +21,8 @@ public class AddCustomerTests extends BaseTest
      CustomerListPage customerListPage = managerPage.clickCustomerListButton();
      customerListPage.searchCustomer("Abdul");
      Assert.assertEquals(customerListPage.getSearchedResult(), "Abdul");
+     goHome();
     }
 
 
 }
-// home > ManagerPage > add customer Page

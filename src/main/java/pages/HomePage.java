@@ -16,6 +16,9 @@ public class HomePage
     }
     @FindBy(xpath = "//button[contains(text(),'Bank Manager Login')]")
     private WebElement managerLoginButton;
+
+    @FindBy(xpath = "//button[contains(text(),'Customer Login')]")
+    private WebElement customerLoginButton;
     public ManagerPage clickManagerLoginButton()
     {
         managerLoginButton.click();
@@ -24,7 +27,7 @@ public class HomePage
 
     public CustomerPage clickCustomerLoginButton()
     {
-
+        customerLoginButton.click();
         return new CustomerPage(driver);
     }
 
