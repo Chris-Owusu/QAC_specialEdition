@@ -34,7 +34,7 @@ public class TransactionsPage
     @FindBy(css = "button[type=\"submit\"]")
     private WebElement depositSubmitButton;
 
-    @FindBy(xpath = "//button[contains(text(),'Withdraw')]")
+    @FindBy(xpath = "//button[contains(text(),'Withdraw') and contains(@class, 'btn-default')]")
     private WebElement withdrawSubmitButton;
     public void depositMoney()
     {
@@ -47,16 +47,11 @@ public class TransactionsPage
     public void withdrawAmount() throws InterruptedException {
 
         int depositAmount = Integer.parseInt(amountDeposited);
-        System.out.println(depositAmount);
-
         int withdrawAmount = (int) (0.2 * depositAmount);
-        System.out.println(withdrawAmount);
-
         String amount = String.valueOf(withdrawAmount);
         withDrawlButton.click();
-        withdrawAmountInput.sendKeys(amount);
-        System.out.println(amount);
         Thread.sleep(4000);
+        withdrawAmountInput.sendKeys(amount);
         withdrawSubmitButton.click();
 
     }
