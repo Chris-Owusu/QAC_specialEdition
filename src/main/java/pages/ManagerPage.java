@@ -38,4 +38,5 @@ public class ManagerPage
         return new CustomerListPage(driver);
     }
 
+
 }

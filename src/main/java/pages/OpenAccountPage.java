@@ -41,5 +41,6 @@ public class OpenAccountPage
     public void process()
     {
       processButton.click();
+      driver.switchTo().alert().accept();
     }
 }
