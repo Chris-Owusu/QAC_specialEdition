@@ -1,0 +1,22 @@
+{
+  "name": "qac_specialedition",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chris-Owusu/QAC_specialEdition.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chris-Owusu/QAC_specialEdition/issues"
+  },
+  "homepage": "https://github.com/Chris-Owusu/QAC_specialEdition#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.43.1",
+    "@types/node": "^20.12.8"
+  }
+}
