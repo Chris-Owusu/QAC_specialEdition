@@ -33,7 +33,7 @@ public class ManagerPage
         return new OpenAccountPage(driver);
     }
 
-    public CustomerListPage clickCustomersButton()  {
+    public CustomerListPage clickCustomerListButton()  {
         viewCustomersButton.click();
         return new CustomerListPage(driver);
     }

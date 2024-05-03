@@ -12,6 +12,8 @@ public class CustomerListPage
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
+    @FindBy(css = "tbody td:nth-child(1)")
+    private WebElement searchedItemContainer;
     @FindBy(css = "input[placeholder='Search Customer']")
     private WebElement searchCustomerInput;
 
@@ -20,6 +22,11 @@ public class CustomerListPage
         searchCustomerInput.sendKeys(customerName);
         // tbody td:nth-child(1)
         // //button[normalize-space()='Delete']
+    }
+
+    public String getSearchedResult()
+    {
+        return searchedItemContainer.getText();
     }
 
 }

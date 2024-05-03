@@ -1,5 +1,7 @@
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.AddCustomerPage;
+import pages.CustomerListPage;
 import pages.ManagerPage;
 import pages.OpenAccountPage;
 
@@ -16,6 +18,9 @@ public class AddCustomerTests extends BaseTest
      openAccountPage.selectCustomer("Abdul Razak");
      openAccountPage.selectCurrency("Dollar");
      openAccountPage.process();
+     CustomerListPage customerListPage = managerPage.clickCustomerListButton();
+     customerListPage.searchCustomer("Abdul");
+     Assert.assertEquals(customerListPage.getSearchedResult(), "Abdul");
     }
 
 
